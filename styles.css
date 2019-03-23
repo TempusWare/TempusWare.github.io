@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen');
+* {
+  margin: 0
+}
+div.halfHeight {
+  background-position: center;
+  height: 50vh
+}
+div#div1 {
+  background-color: #F2F2F2;
+  /*border-bottom: white solid 2.5px;*/
+}
+div#div2 {
+  background-color: #191919;
+  /*border-top: white solid 2.5px;*/
+  /*border-bottom: white solid 2.5px;*/
+}
+div#div3 {
+  background-color: #11275D;
+}
+div#div4 {
+  /*background-color: #FFE677;*/
+  background-color: #224390;
+}
+div#div4 div {
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh
+}
+div#div5 {
+  background-color: #1F366E;
+}
+div#div6 {
+  background-color: #191919;
+}
+div#div7 {
+  background-color: #F2F2F2;
+}
+div#logo {
+  position: relative;
+  top: 100%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+div#logo img {
+  width: 30vh;
+  max-width: 50vw;
+  transition: 0.25s;
+}
+div#logo img:hover {
+  transform: scale(1.2);
+  cursor: pointer
+}
+div#logo img:active {
+  opacity: 0.75;
+}
+div.button {
+  display: inline-block;
+}
+div.button img {
+  height: 38.3vw;
+  max-height: 383px;
+  cursor: pointer;
+  transition: 0.25s
+  /*filter: invert(100%);*/
+}
+div#buttonLeft img {
+  transform-origin: right;
+}
+div#buttonRight img {
+  transform-origin: left;
+}
+div.button img:hover {
+  transform: scaleX(1.2);
+  opacity: 0.75
+}
+div.button img:active {
+  opacity: 0.5;
+}
+h1 {
+  text-align: center;
+  font-size: 500%;
+  color: white;
+  font-family: 'Courier New', Courier;
+  /*font-family: 'Oxygen', sans-serif;*/
+  padding-top: 1vh;
+}
+p {
+  text-align: center;
+  font-size: 150%;
+  color: white;
+  /*font-family: 'Courier New', Courier;*/
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 3vh;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+div.displayFrame {
+  display: inline-block;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  width: 68vw;
+  height: 38.3vw;
+  max-width: 680px;
+  max-height: 383px;
+}

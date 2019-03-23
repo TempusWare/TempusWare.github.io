@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TempusWare</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <section id="home">
+      <div class="halfHeight" id="div1">
+        <div id="logo">
+          <img src="logo.svg" alt="TempusWare" onclick="redirect('https://youtube.com/tempusware')">
+        </div>
+      </div>
+      <div class="halfHeight" id="div2"></div>
+    </section>
+    <section>
+      <div id="div3">
+        <div>
+          <h1>TempusWare</h1>
+          <p>Began creating content in 2014, starting with Minecraft Doctor Who animations and title sequences</p>
+          <p>Created animations using audio excerpts from Yellowbunbunz's gameplay videos</p>
+          <p>Directed a machinima comedy web-series from 2017 to 2018 called <i>#WaddleOnRewritten</i></p>
+        </div>
+      </div>
+      <div id="div4">
+        <div>
+          <div class="button" id="buttonLeft" onclick="playlist(-1)">
+            <img src="arrow-rect-left.svg" alt="Button">
+          </div>
+          <div class="displayFrame">
+            <iframe id="playlist" width="100%" height="100%" src="https://www.youtube.com/embed/_qwaiBsY4HA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="button" id="buttonRight" onclick="playlist(+1)">
+            <img src="arrow-rect-right.svg" alt="Button">
+          </div>
+        </div>
+      </div>
+      <div id="div5">
+      </div>
+    </section>
+    <section id="profile">
+      <div class="halfHeight" id="div6">
+        <div id="logo">
+          <img src="profile.svg" alt="TempusWare" onclick="redirect('https://twitter.com/tempusware')">
+        </div>
+      </div>
+      <div class="halfHeight" id="div7"></div>
+    </section>
+  </body>
+</html>
+<script type="text/javascript">
+  function redirect(link) {
+    window.location = link
+  }
+  var playlistSequence = 0
+  function playlist(progression) {
+    playlistSequence += progression
+    if (playlistSequence < 0) {
+      playlistSequence = playlistVideos.length - 1
+    }
+    if (playlistSequence > playlistVideos.length - 1) {
+      playlistSequence = 0
+    }
+    return document.getElementById("playlist").src = "https://www.youtube.com/embed/" + playlistVideos[playlistSequence] + "?rel=0&amp;showinfo=0"
+  }
+  var playlistVideos = ["_qwaiBsY4HA", "lqeSQJdAJGY", "F7TcEixq-38", "2okdEjoWSvo"]
+</script>
