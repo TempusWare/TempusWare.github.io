@@ -6,35 +6,38 @@ div.halfHeight {
   background-position: center;
   height: 50vh
 }
-div#div1 {
-  background-color: #F2F2F2;
+div#top0 {
+  background-color: #E4E9F6;
   /*border-bottom: white solid 2.5px;*/
 }
-div#div2 {
-  background-color: #191919;
+div#top1 {
+  background-color: #090E1B;
   /*border-top: white solid 2.5px;*/
   /*border-bottom: white solid 2.5px;*/
 }
-div#div3 {
+div#div1 {
   background-color: #11275D;
 }
-div#div4 {
+div#div2 {
   /*background-color: #FFE677;*/
   background-color: #224390;
 }
-div#div4 div {
+div.player {
   text-align: center;
   padding-top: 1vh;
   padding-bottom: 1vh
 }
-div#div5 {
-  background-color: #1F366E;
+div#div3 {
+  background-color: #902227;
 }
-div#div6 {
-  background-color: #191919;
+div#div4 {
+  background-color: #5D1114;
 }
-div#div7 {
-  background-color: #F2F2F2;
+div#bottom0 {
+  background-color: #090E1B;
+}
+div#bottom1 {
+  background-color: #E4E9F6;
 }
 div#logo {
   position: relative;
@@ -63,8 +66,8 @@ div.button img {
   height: 38.3vw;
   max-height: 383px;
   cursor: pointer;
-  transition: 0.25s
-  /*filter: invert(100%);*/
+  transition: 0.25s;
+  /*filter: invert(100%)*/
 }
 div#buttonLeft img {
   transform-origin: right;
@@ -78,6 +81,7 @@ div.button img:hover {
 }
 div.button img:active {
   opacity: 0.5;
+  transform: scaleX(1);
 }
 h1 {
   text-align: center;
