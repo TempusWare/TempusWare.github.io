@@ -7,62 +7,35 @@
     <link rel="icon" href="logo.png">
   </head>
   <body>
-    <section id="home">
-      <div class="halfHeight" id="top0">
-        <div id="logo">
-          <a href="https://youtube.com/tempusware"><img src="logo.svg" alt="TempusWare Logo"></a>
-        </div>
-      </div>
-      <div class="halfHeight" id="top1"></div>
-    </section>
-    <section>
-      <div id="div1">
-        <h1>TempusWare</h1>
-        <p>Began creating content in 2014, starting with Minecraft Doctor Who animations and title sequences</p>
-        <p>Created animations using audio excerpts from Yellowbunbunz's gameplay videos</p>
-        <p>Directed a machinima comedy web-series from 2017 to 2018 called <i>#WaddleOnRewritten</i></p>
-      </div>
-      <div id="div2" class="player">
-        <div>
-          <div class="button" id="buttonLeft" onclick="playlist(-1, 'twVideos', playlistVideos, 0)">
-            <img src="arrow-rect-left.svg" alt="Button">
-          </div>
-          <div class="displayFrame">
-            <iframe id="twVideos" width="100%" height="100%" src="https://www.youtube.com/embed/_qwaiBsY4HA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="button" id="buttonRight" onclick="playlist(+1, 'twVideos', playlistVideos, 0)">
-            <img src="arrow-rect-right.svg" alt="Button">
-          </div>
-        </div>
-        <!--<button type="button" name="button" onclick="alert(playlistSequence[0])">Sequence number</button>-->
-      </div>
-      <div id="div3">
-        <h1>#WaddleOn Rewritten</h1>
-        <p>Premiered on February 17, 2017 on TempusWare's channel before moving to its own channel after the first episode</p>
-        <p>Run by community members of Club Penguin who dedicated their free time to act, write and edit for the project</p>
-      </div>
-      <div id="div4" class="player">
-        <div>
-          <div class="button" id="buttonLeft" onclick="playlist(-1, 'woEpisodes', waddleonEpisodes, 1)">
-            <img src="arrow-rect-left.svg" alt="Button">
-          </div>
-          <div class="displayFrame">
-            <iframe id="woEpisodes" width="100%" height="100%" src="https://www.youtube.com/embed/GWAJt4vGD4M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="button" id="buttonRight" onclick="playlist(+1, 'woEpisodes', waddleonEpisodes, 1)">
-            <img src="arrow-rect-right.svg" alt="Button">
-          </div>
-        </div>
-        <!--<button type="button" name="button" onclick="alert(playlistSequence[1])">Sequence number</button>-->
+    <section style="background-color:#11275D;background-image:linear-gradient(#11275D 50%, #224390 50%)">
+      <div class="icon" onclick="reveal('tempusware')" id="icon-tempusware"> <img src="logo.svg"> </div>
+      <div class="info" id="infobox-tempusware">
+        <h1><a href="https://youtube.com/tempusware">Tempus&#8203;Ware</a></h1>
+        <p onclick="display('video', '_qwaiBsY4HA')">Began creating content in 2014, starting with Minecraft Doctor Who animations and title sequences</p>
+        <p onclick="display('video', 'lqeSQJdAJGY')">Created animations using audio excerpts from Yellowbunbunz's gameplay videos</p>
+        <p onclick="display('video', 'F7TcEixq-38')">Directed a machinima comedy web-series from 2017 to 2018 called <i>#WaddleOnRewritten</i></p>
       </div>
     </section>
-    <section id="profile">
-      <div class="halfHeight" id="bottom0">
-        <div id="logo">
-          <a href="https://twitter.com/tempusware"><img src="profile.svg" alt="TempusWare Profile Picture"></a>
-        </div>
+    <section style="background-color:#902227;background-image:linear-gradient(#902227 50%, #5D1114 50%)">
+      <div class="icon" onclick="reveal('waddleonrewritten')" id="icon-waddleonrewritten"> <img src="penguin.svg"> </div>
+      <div class="info" id="infobox-waddleonrewritten">
+        <h1><a href="https://youtube.com/waddleonrewritten">#WaddleOn&#8203;Rewritten</a></h1>
+        <p onclick="display('video', 'GWAJt4vGD4M')">Premiered on February 17, 2017 on TempusWare's channel before moving to its own channel after the first episode</p>
+        <p onclick="display('video', 'Ppcwgt6wGhk')">Run by community members of Club Penguin who dedicated their free time to act, write and edit for the project</p>
       </div>
-      <div class="halfHeight" id="bottom1"></div>
+    </section>
+    <section style="background-color:#5E9022;background-image:linear-gradient(#5E9022 50%, #3A5D11 50%)">
+      <div class="icon" onclick="reveal('codingprojects')" id="icon-codingprojects"> <img src="profile.svg"> </div>
+      <div class="info" id="infobox-codingprojects">
+        <h1><a href="https://github.com/tempusware">Coding Projects</a></h1>
+        <p onclick="display('website', 'https://tempusware.github.io/thin-ice/')">-&nbsp;Club Penguin mini-game recreations</p>
+        <p onclick="display('website', 'https://tempusware.github.io/caption-adder/')">-&nbsp;A tool for adding text to images</p>
+      </div>
+    </section>
+    <section style="background-color:#1D1D1D;background-image:linear-gradient(#1D1D1D 50%, #131313 50%)">
+      <div id="contentdisplay">
+        <p onclick="alert('Not this one; Click one that\'s under a heading!')">Click on a line of text for content to appear here.</p>
+      </div>
     </section>
   </body>
 </html>

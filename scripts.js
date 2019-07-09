@@ -1,34 +1,49 @@
-function redirect(link) {
-  window.location = link
-}
+var infoboxes = {
+  tempusware: document.getElementById("infobox-tempusware"),
+  waddleonrewritten: document.getElementById("infobox-waddleonrewritten"),
+  codingprojects: document.getElementById("infobox-codingprojects"),
+};
+var boxshown = {
+  tempusware: false,
+  waddleonrewritten: false,
+  codingprojects: false,
+};
+function reveal(infobox) {
+  var boxelement = document.getElementById("infobox-" + infobox);
+  var iconelement = document.getElementById("icon-" + infobox);
+  if (!boxshown[infobox]) {
+    boxelement.style.width = "60vw";
+    iconelement.style.width = "15vh";
+    iconelement.style.height = "15vh";
+    boxshown[infobox] = true;
+  } else {
+    boxelement.style.width = "0px";
+    iconelement.style.width = "30vh";
+    iconelement.style.height = "30vh";
+    boxshown[infobox] = false;
+  };
+};
 
-// Initialize numbers in playlists
-var playlistSequence = [0, 0]
-function playlist(progression, player, playlist, sequencenum) {
-  // Calculate the number in playlist when the button is clicked (e.g. add +1 to the current number)
-  playlistSequence[sequencenum] += progression
-  // If, after adding to the number when clicking on the button, the number is higher than the total number of videos in the playlist,
-  // set the video to the first video in the playlist by resetting the number to 0
-  if (playlistSequence[sequencenum] < 0) {
-    playlistSequence[sequencenum] = playlist.length - 1
-  }
-  // If, after subtracting from the number when clicking on the button, the number is lower is 0,
-  // set the number to the last video in the playlist by setting the number to the number of videos in the playlist (minus 1 cause computers start at 0)
-  if (playlistSequence[sequencenum] > playlist.length - 1) {
-    playlistSequence[sequencenum] = 0
-  }
-  // Send the embed link to the player
-  return document.getElementById(player).src = "https://www.youtube.com/embed/" + playlist[playlistSequence[sequencenum]] + "?rel=0&amp;showinfo=0"
-}
-
-// Breaking the Wall: _qwaiBsY4HA
-// Yellowbunbunz:     lqeSQJdAJGY
-// WOR Compilation:   F7TcEixq-38
-// Title Sequence:    2okdEjoWSvo
-var playlistVideos = ["_qwaiBsY4HA", "lqeSQJdAJGY", "F7TcEixq-38", "2okdEjoWSvo"]
-
-// Record Breaker:    GWAJt4vGD4M
-// St Patrick's Day:  USNLLVZezGA
-// Music Jam:         efT8DzCLqcs
-// Medieval Party:    Ppcwgt6wGhk
-var waddleonEpisodes = ["GWAJt4vGD4M", "USNLLVZezGA", "efT8DzCLqcs", "Ppcwgt6wGhk"]
+var displaybox = document.getElementById("contentdisplay");
+function display(mediatype, source) {
+  if (displaybox.children.length != 0) {displaybox.removeChild(displaybox.children[0])};
+  if (mediatype == "video") {
+    var iframe = document.createElement("iframe");
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.src = "https://www.youtube.com/embed/" + source + "?rel=0&amp;showinfo=0";
+    iframe.frameBorder = "0";
+    iframe.allowFullScreen = "allowFullScreen";
+    displaybox.appendChild(iframe);
+  };
+  if (mediatype == "website") {
+    var iframe = document.createElement("iframe");
+    iframe.width = "100%";
+    iframe.height = "100%";
+    iframe.src = source;
+    iframe.frameBorder = "0";
+    iframe.style.background = "white";
+    displaybox.appendChild(iframe);
+  };
+  window.location = "#contentdisplay";
+};
