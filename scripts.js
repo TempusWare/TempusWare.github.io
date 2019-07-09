@@ -33,7 +33,7 @@ function display(mediatype, source) {
     iframe.height = "100%";
     iframe.src = "https://www.youtube.com/embed/" + source + "?rel=0&amp;showinfo=0";
     iframe.frameBorder = "0";
-    iframe.allowFullScreen = "allowFullScreen";
+    iframe.setAttribute("allowfullscreen", "allowfullscreen");
     displaybox.appendChild(iframe);
   };
   if (mediatype == "website") {
