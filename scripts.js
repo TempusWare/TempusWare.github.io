@@ -47,3 +47,8 @@ function display(mediatype, source) {
   };
   window.location = "#contentdisplay";
 };
+
+if (!localStorage["visited"]) {
+  setTimeout(function(){alert("Click on a line of text to display something in the content box!")}, 1000);
+  localStorage.setItem("visited", "true");
+};

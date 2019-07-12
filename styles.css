@@ -44,7 +44,7 @@ p {
   font-size: 3vh;
   font-family: 'Open Sans', sans-serif;
 }
-p:hover {
+p.link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
