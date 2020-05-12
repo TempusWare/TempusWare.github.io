@@ -6,41 +6,52 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="logo.png">
     <meta name="description" content="A hub for the projects of TempusWare.">
+    <script src="svg-inject.min.js"></script>
+    <script>
+      SVGInject.setOptions({
+        makeIdsUnique: false
+      })
+    </script>
   </head>
   <body>
-    <section style="background-color:#224390;background-image:linear-gradient(90deg, #224390 50%, #11275D 50%)">
+    <section style="background-color:#224390;background-image:linear-gradient(135deg, #224390 50%, #11275D 50%)">
       <div class="box">
-        <div class="icon"> <a href="http://rdr.078596.xyz/webclickTW"> <img src="logo.svg"> </a> </div>
+        <div class="icon"> <img src="img/logo.svg" onload="SVGInject(this)"> </div>
         <div class="textbox">
           <h1>TempusWare</h1>
           <p>Animator, Writer, Director.</p>
-          <a class="link" href="http://rdr.078596.xyz/webclickTW_YT">YouTube</a>
-          <a class="link" href="http://rdr.078596.xyz/webclickTW_TWT">Twitter</a>
-          <a class="link" href="http://rdr.078596.xyz/webclickTW_GH">GitHub</a>
+          <a class="link" href="https://youtube.com/tempusware">YouTube</a>
+          <a class="link" href="https://twitter.com/tempusware">Twitter</a>
+          <a class="link" href="https://github.com/tempusware">GitHub</a>
         </div>
       </div>
     </section>
-    <section style="background-color:#1D1D1D;background-image:linear-gradient(#1D1D1D 50%, #131313 50%)">
+    <section style="background-color:#1D1D1D;background-image:linear-gradient(135deg, #1D1D1D 50%, #131313 50%)">
       <div class="box">
-        <div class="icon"> <a href="http://rdr.078596.xyz/webclickTB"> <img src="tempbot.svg"> </a> </div>
+        <div class="icon"> <img src="img/tempbot.svg" onload="SVGInject(this)"> </div>
         <div class="textbox">
           <h2>TempBot</h2>
           <p>Discord bot with games and text tools.</p>
           <a class="link" href="http://rdr.078596.xyz/tempbot">Invite</a>
-          <a class="link" href="http://rdr.078596.xyz/webclickTB_R">Repository</a>
+          <a class="link" href="https://github.com/TempusWare/TempBot">Repository</a>
         </div>
       </div>
     </section>
-    <section style="background-color:#902227;background-image:linear-gradient(-90deg, #902227 50%, #5D1114 50%)">
+    <section style="background-color:#902227;background-image:linear-gradient(135deg, #902227 50%, #5D1114 50%)">
       <div class="box">
-        <div class="icon"> <a href="http://rdr.078596.xyz/webclickWOR"> <img src="penguin.svg"> </a> </div>
+        <div class="icon"> <img src="img/penguin.svg" onload="SVGInject(this)"> </div>
         <div class="textbox">
           <h2>#WaddleOn&#8203;Rewritten</h2>
           <p>A machinima series of comedy skits.</p>
           <a class="link" href="http://rdr.078596.xyz/webclickWOR_PL">Playlist</a>
+          <a class="link" href="http://discord.gg/7UrHWne">Join</a>
         </div>
       </div>
     </section>
-    <script src="scripts.js"></script>
+    <section style="background-color:#1D1D1D;background-image:linear-gradient(135deg, #1D1D1D 50%, #131313 50%)">
+      <div id="copyright">
+        <a style="float:right" href="https://github.com/TempusWare/TempusWare.github.io/blob/master/README.md">Licenses</a>
+      </div>
+    </section>
   </body>
 </html>
