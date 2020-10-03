@@ -87,3 +87,24 @@ div#copyright > a {
   text-decoration: underline;
   color: grey;
 }
+div.gallery {
+  text-align: center;
+}
+div.painting {
+  width: 320px;
+  height: 180px;
+  display: inline-block;
+  border: 5px solid white;
+  transition: .2s;
+  /* filter: grayscale(.5); */
+  filter: sepia(50%);
+  z-index: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div.painting:hover {
+  transform: scale(1.1);
+  /* filter: grayscale(0); */
+  filter: sepia(0%);
+  z-index: 1;
+}
