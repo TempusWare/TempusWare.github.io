@@ -1,29 +1,114 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen&family=Courier+Prime&display=swap');
 html {
-  scrollbar-color: rgb(100,100,100) rgb(10,10,10);
-  scrollbar-width: thin;
+  scrollbar-color: rgb(200,200,200) rgb(10,10,10);
+  /* scrollbar-width: thin; */
 }
 body {
   margin: 0;
 }
 section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+div.info, div.gallery {
+  justify-content: center;
+  align-items: center;
+  flex: 50%;
+}
+div.info {
+  display: flex;
+  flex-direction: column;
+}
+h1, p, h2, div.info > ul > li {
+  /* text-align: center; */
+  color: white;
+  margin: 0;
+}
+h1, h2, p {
   text-align: center;
-  padding: 2.5vh;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-div.box {
-  display: inline-block;
-  margin-top: 2.5vh;
-  margin-bottom: 2.5vh;
-  margin-left: 2.5vh;
-  margin-right: 2.5vh;
+h1, h2 {
+  font-size: 6vh;
+  font-family: 'Courier Prime', monospace;
 }
+p {
+  font-size: 3vh;
+  font-family: 'Open Sans', sans-serif;
+}
+div.info > ul > li {
+  font-size: 3.5vh;
+  /* margin-left: 1vh;
+  margin-right: 1vh; */
+  /* color: white; */
+}
+div.info > ul > li > a {
+  font-size: inherit;
+  font-family: 'Oxygen', sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: .25s;
+  color: inherit;
+}
+div.info > ul > li > a:hover {
+  opacity: .5
+}
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.gallery > a {
+  width: 320px;
+  height: 180px;
+  margin: 15px;
+  border: 5px solid white;
+  overflow: hidden;
+}
+div.gallery > a > div {
+  width: 320px;
+  height: 180px;
+  transition: .2s;
+  transform: scale(1.25);
+  filter: blur(7px);
+  /* filter: sepia(50%); */
+  margin-left: 0px;
+  margin-right: 0px;
+  background-size: contain;
+
+}
+div.gallery > a:hover > div {
+  transform: scale(1);
+  filter: blur(0px);
+  /* filter: sepia(0%); */
+}
+
+@media (max-width: 800px) {
+  div.info, div.gallery {
+    flex: 100%;
+  }
+  div.gallery > a > div {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  div.gallery > a:hover > div {
+    transform: scale(1.1);
+    filter: blur(0px);
+  }
+}
+
 div.icon {
+  padding: 2.5vh;
   width: 30vh; height: 30vh;
   max-width: 50vw;
   max-height: 50vw;
-  margin: auto;
 }
-div.icon svg {
+div.icon > svg {
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 1;
@@ -42,69 +127,49 @@ div.icon svg {
 .icon > svg > a > g:hover > g#tempuslogo {
   transform: scale(1.2);
 }
-div.info {
-  width: 0px;
-  max-height: 100vh;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.25);
+.icon > svg > a > g:hover > g#penguin {
+  transform: scale(1.7) rotate(-10deg);
 }
-div.textbox {
-  margin-top: 2.5vh;
+.icon > svg > a > g:hover > g#ben10icon {
+  transform: scale(1.5);
 }
-h1, h2 {
-  font-size: 6vh;
-  font-family: 'Courier New', Courier;
-}
-p {
-  font-size: 3vh;
-  font-family: 'Open Sans', sans-serif;
-}
-a.link {
-  font-size: 3.5vh;
-  font-family: 'Oxygen', sans-serif;
-  margin-left: 1vh;
-  margin-right: 1vh;
-  text-decoration: underline;
-  font-weight: bold;
-}
-h1, p, h2 {
-  text-align: center;
-  color: white;
-  margin: 0;
-}
-a.link {
-  color: white;
+g#ben10icon > g {
   transition: .25s;
 }
-a.link:hover {
-  opacity: .5
+.icon > svg > a > g:hover > g#ben10icon > g#emitter {
+  transform: translate(0px, -8px);
 }
-div#copyright {
-  padding-bottom: 2.5vh;
+g#ben10icon > g#wires {
+  transform: translate(0px, 8px);
 }
-div#copyright > a {
-  font-family: 'Oxygen', sans-serif;
-  text-decoration: underline;
-  color: grey;
+.icon > svg > a > g:hover > g#ben10icon > g#wires {
+  transform: translate(0px, 0px);
 }
-div.gallery {
-  text-align: center;
+g#ben10icon > g > g {
+  transition: .25s;
 }
-div.painting {
-  width: 320px;
-  height: 180px;
-  display: inline-block;
-  border: 5px solid white;
-  transition: .2s;
-  /* filter: grayscale(.5); */
-  filter: sepia(50%);
-  z-index: 0;
-  margin-left: 10px;
-  margin-right: 10px;
+g#emitter > g#hourglass-main {
+  opacity: 1;
 }
-div.painting:hover {
-  transform: scale(1.1);
-  /* filter: grayscale(0); */
-  filter: sepia(0%);
-  z-index: 1;
+g#emitter > g#hourglass-alt {
+  opacity: 0;
+}
+.icon > svg > a > g:hover > g#ben10icon > g#emitter > g#hourglass-main {
+  opacity: 0;
+}
+.icon > svg > a > g:hover > g#ben10icon > g#emitter > g#hourglass-alt {
+  opacity: 1;
+}
+.icon > svg > a > g:hover > g#policebox {
+  transform: scale(2) skew(-2deg, -2deg) rotate(7deg);
+}
+.icon > svg > a > g > g#background > g > #spiral {
+  transition: .25s;
+  transform-origin: 50% 50%;
+}
+.icon > svg > a > g > g#background > g > #spiral {
+  transform: scale(1) skew(0deg, 0deg);
+}
+.icon > svg > a > g:hover > g#background > g > #spiral {
+  transform: scale(1.5) skew(-10deg, -10deg);
 }
