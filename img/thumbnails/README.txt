@@ -1,0 +1,1 @@
+JPG Compression: 80%

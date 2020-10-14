@@ -1,0 +1,69 @@
+div.icon {
+    padding: 2.5vh;
+    width: 30vh; height: 30vh;
+    max-width: 50vw;
+    max-height: 50vw;
+    /* margin: auto; */
+  }
+  div.icon > svg {
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    overflow: visible;
+  }
+  .icon > svg > a > g > g {
+    transform-origin: 50% 50%;
+    transition: .25s;
+  }
+.icon > svg > a > g:hover > g#background {
+    transform: scale(1.1);
+  }
+  .icon > svg > a > g:hover > g#foreground {
+    transform: scale(1.7);
+  }
+  .icon > svg > a > g:hover > g#tempuslogo {
+    transform: scale(1.2);
+  }
+  .icon > svg > a > g:hover > g#ben10icon {
+    transform: scale(1.5);
+  }
+  g#ben10icon > g {
+    transition: .25s;
+  }
+  .icon > svg > a > g:hover > g#ben10icon > g#emitter {
+    transform: translate(0px, -8px);
+  }
+  g#ben10icon > g#wires {
+    transform: translate(0px, 8px);
+  }
+  .icon > svg > a > g:hover > g#ben10icon > g#wires {
+    transform: translate(0px, 0px);
+  }
+  g#ben10icon > g > g {
+    transition: .25s;
+  }
+  g#emitter > g#hourglass-main {
+    opacity: 1;
+  }
+  g#emitter > g#hourglass-alt {
+    opacity: 0;
+  }
+  .icon > svg > a > g:hover > g#ben10icon > g#emitter > g#hourglass-main {
+    opacity: 0;
+  }
+  .icon > svg > a > g:hover > g#ben10icon > g#emitter > g#hourglass-alt {
+    opacity: 1;
+  }
+  .icon > svg > a > g:hover > g#policebox {
+    transform: scale(2) skew(-2deg, -2deg) rotate(7deg);
+  }
+  .icon > svg > a > g > g#background > g > #spiral {
+    transition: .25s;
+    transform-origin: 50% 50%;
+  }
+  .icon > svg > a > g > g#background > g > #spiral {
+    transform: scale(1) skew(0deg, 0deg);
+  }
+  .icon > svg > a > g:hover > g#background > g > #spiral {
+    transform: scale(1.5) skew(-10deg, -10deg);
+  }
