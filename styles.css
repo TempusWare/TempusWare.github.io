@@ -8,6 +8,8 @@ body {
 }
 section {
   display: flex;
+}
+section.profile, section.article {
   flex-wrap: wrap;
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
@@ -69,37 +71,67 @@ div.gallery > a {
   margin: 15px;
   border: 5px solid white;
   overflow: hidden;
+  transition: .25s;
+}
+div.gallery > a:hover {
+  border: 5px solid black;
 }
 div.gallery > a > div {
   width: 320px;
   height: 180px;
-  transition: .2s;
-  transform: scale(1.25);
-  filter: blur(7px);
-  /* filter: sepia(50%); */
+  transition: .25s;
+  transform: scale(1);
   margin-left: 0px;
   margin-right: 0px;
   background-size: contain;
 
 }
 div.gallery > a:hover > div {
-  transform: scale(1);
-  filter: blur(0px);
-  /* filter: sepia(0%); */
+  transform: scale(1.1);
 }
-
 @media (max-width: 800px) {
   div.info, div.gallery {
     flex: 100%;
   }
-  div.gallery > a > div {
-    transform: scale(1);
-    filter: blur(0px);
-  }
-  div.gallery > a:hover > div {
-    transform: scale(1.1);
-    filter: blur(0px);
-  }
+}
+
+/* section.parallax {
+  justify-content: center;
+}
+div.parallax-container {
+  width: 1280px;
+  height: 720px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 8px;
+  perspective-origin: 0%;
+  display: flex;
+  justify-content: center;
+}
+div.parallax-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+}
+div.parallax-item > img {
+  width: 1280px;
+  height: 720px;
+}
+div.lax-0 {
+  transform: translateZ(0px);
+}
+div.lax-1 {
+  transform: translateZ(4px) scale(0.5);
+} */
+
+section.article {
+  justify-content: center;
+}
+section.article > p {
+  max-width: 800px;
+  text-align: left;
 }
 
 div.icon {
