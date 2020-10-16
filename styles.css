@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oxygen&family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Open+Sans&family=Oxygen&display=swap');
+h1, h2 {
+  font-family: 'Courier Prime', monospace;
+}
+p, div.gallery > a > div:nth-of-type(2) {
+  font-family: 'Open Sans', sans-serif;
+}
+div.info > ul > li {
+  font-family: 'Oxygen', sans-serif;
+}
 html {
   scrollbar-color: rgb(200,200,200) rgb(10,10,10);
   /* scrollbar-width: thin; */
@@ -39,10 +48,15 @@ h1, h2, p {
 }
 h1, h2 {
   font-size: 4em;
-  font-family: 'Courier Prime', monospace;
 }
-p, div.gallery > a > div:nth-of-type(2) {
-  font-family: 'Open Sans', sans-serif;
+div.hr {
+  width: 100%;
+  max-width: 600px;
+}
+div.hr > hr {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 div.info > p:first-of-type {
   font-size: 1.5em;
@@ -63,7 +77,6 @@ div.info > p > a:hover {
 }
 div.info > ul > li {
   font-size: 1.5em;
-  font-family: 'Oxygen', sans-serif;
 }
 div.info > ul > li > a {
   text-decoration: underline;
@@ -136,6 +149,7 @@ div.gallery > a:hover > div:nth-of-type(2) {
 }
 div#navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 div#navbar > div.icon {
