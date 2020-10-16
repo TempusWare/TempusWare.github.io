@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="105.83333mm"
+   height="105.83333mm"
+   viewBox="0 0 105.83333 105.83333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="youtube.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="227.92113"
+     inkscape:cy="217.8896"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g38"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <a
+     id="a40"
+     xlink:href="https://youtube.com/tempusware">
+    <g
+       id="g38">
+      <circle
+         style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.264583"
+         id="circle891"
+         cx="52.916664"
+         cy="52.916664"
+         r="52.91666" />
+      <path
+         class="st0"
+         d="m 86.595589,35.897424 c -0.79903,-3.0363 -3.1961,-5.43337 -6.2324,-6.27235 -5.47332,-1.4782 -27.44652,-1.4782 -27.44652,-1.4782 0,0 -21.9732,0 -27.48647,1.4782 -3.0363,0.79902 -5.39343,3.1961 -6.2324,6.27235 -1.43825,5.51327 -1.43825,17.01924 -1.43825,17.01924 0,0 0,11.50596 1.4782,17.01924 0.79902,3.0363 3.1961,5.43337 6.2324,6.27235 5.47332,1.4782 27.44652,1.4782 27.44652,1.4782 0,0 21.9732,0 27.48647,-1.4782 3.0363,-0.79903 5.39342,-3.1961 6.2324,-6.27235 1.43824,-5.51328 1.43824,-17.01924 1.43824,-17.01924 0,0 0,-11.50597 -1.47819,-17.01924 z"
+         id="path53"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.399513" />
+      <polygon
+         class="st1"
+         points="78,122.2 78,69.8 124,96 "
+         id="polygon55"
+         style="fill:#ff0000;fill-opacity:1"
+         transform="matrix(0.39951269,0,0,0.39951269,14.637221,14.563446)" />
+    </g>
+  </a>
+  <style
+     type="text/css"
+     id="style10">
+	.st0{fill:#1DA1F2;}
+	.st1{fill:#FFFFFF;}
+</style>
+  <style
+     type="text/css"
+     id="style51">
+	.st0{fill:#EE3124;}
+	.st1{fill:#FFFFFF;}
+</style>
+</svg>

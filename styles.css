@@ -5,6 +5,9 @@ html {
 }
 body {
   margin: 0;
+  display: flex;
+  flex: 100%;
+  flex-direction: column;
 }
 section {
   display: flex;
@@ -13,6 +16,8 @@ section.profile, section.article {
   flex-wrap: wrap;
   padding-top: 2.5vh;
   padding-bottom: 2.5vh;
+  min-height: 100vh;
+  padding: 0;
 }
 div.info, div.gallery {
   justify-content: center;
@@ -24,7 +29,6 @@ div.info {
   flex-direction: column;
 }
 h1, p, h2, div.info > ul > li {
-  /* text-align: center; */
   color: white;
   margin: 0;
 }
@@ -34,22 +38,34 @@ h1, h2, p {
   margin-right: 15px;
 }
 h1, h2 {
-  font-size: 6vh;
+  font-size: 4em;
   font-family: 'Courier Prime', monospace;
 }
-p {
-  font-size: 3vh;
+p, div.gallery > a > div:nth-of-type(2) {
   font-family: 'Open Sans', sans-serif;
 }
+div.info > p:first-of-type {
+  font-size: 1.5em;
+}
+div.info > p {
+  font-size: 1em;
+  justify-content: center;
+  max-width: 600px;
+  text-align: left;
+  padding: 5px;
+}
+div.info > p > a, div.info > p > a:visited {
+  color: inherit;
+  transition: .1s;
+}
+div.info > p > a:hover {
+  opacity: .5;
+}
 div.info > ul > li {
-  font-size: 3.5vh;
-  /* margin-left: 1vh;
-  margin-right: 1vh; */
-  /* color: white; */
+  font-size: 1.5em;
+  font-family: 'Oxygen', sans-serif;
 }
 div.info > ul > li > a {
-  font-size: inherit;
-  font-family: 'Oxygen', sans-serif;
   text-decoration: underline;
   font-weight: bold;
   transition: .25s;
@@ -72,11 +88,12 @@ div.gallery > a {
   border: 5px solid white;
   overflow: hidden;
   transition: .25s;
+  text-decoration: none;
 }
 div.gallery > a:hover {
   border: 5px solid black;
 }
-div.gallery > a > div {
+div.gallery > a > div:first-of-type {
   width: 320px;
   height: 180px;
   transition: .25s;
@@ -86,52 +103,89 @@ div.gallery > a > div {
   background-size: contain;
 
 }
-div.gallery > a:hover > div {
+div.gallery > a:hover > div:first-of-type {
   transform: scale(1.1);
+}
+div.gallery > a > div:nth-of-type(2) {
+  z-index: 2;
+  color: white;
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+  text-decoration-color: black;
+  opacity: 0;
+  transform: scale(.5);
+  transform-origin: center;
+  transition: .25s;
+}
+div.gallery > a:hover > div:nth-of-type(2) {
+  opacity: 1;
+  transform: scale(1);
+  text-shadow: 0px 1px 2px black;
+  text-decoration: underline;
 }
 @media (max-width: 800px) {
   div.info, div.gallery {
     flex: 100%;
   }
+  div.info > p {
+    max-width: 800px;
+  }
 }
-
-/* section.parallax {
-  justify-content: center;
-}
-div.parallax-container {
-  width: 1280px;
-  height: 720px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 8px;
-  perspective-origin: 0%;
+div#navbar {
   display: flex;
   justify-content: center;
 }
-div.parallax-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1280px;
-  height: 720px;
+div#navbar > div.icon {
+  width: 15vh; height: 15vh;
 }
-div.parallax-item > img {
-  width: 1280px;
-  height: 720px;
+section#tempusware > div, section#socials > div {
+  flex: 100%;
 }
-div.lax-0 {
-  transform: translateZ(0px);
-}
-div.lax-1 {
-  transform: translateZ(4px) scale(0.5);
+/* section.profile:nth-child(odd) {
+  flex-direction: row-reverse;
+} */
+/* section#tempusware {
+  flex-direction: row;
 } */
 
-section.article {
-  justify-content: center;
+section#tempusware {
+  order: 1;
 }
-section.article > p {
-  max-width: 800px;
-  text-align: left;
+section#waddleonrewritten {
+  order: 3;
+  flex-direction: row-reverse;
+}
+section#ben10 {
+  order: 4;
+}
+section#doctorwho {
+  order: 2;
+}
+section#socials {
+  order: 5;
+}
+
+div.socials {
+  display: flex;
+}
+div.socials > div {
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+  overflow: visible;
+}
+div.socials > div > svg {
+  width: inherit;
+  height: inherit;
+  overflow: visible;
+}
+div.socials > div > svg > a > g {
+  transform-origin: 50% 50%;
+  transition: .25s;
+}
+div.socials > div > svg > a > g:hover {
+  transform: scale(1.1);
 }
 
 div.icon {
@@ -161,6 +215,13 @@ div.icon > svg {
 }
 .icon > svg > a > g:hover > g#penguin {
   transform: scale(1.7) rotate(-10deg);
+}
+g#penguin-water {
+  transform-origin: 50% 50%;
+  transition: .25s;
+}
+.icon > svg > a > g:hover > g#background > g > g#penguin-water {
+  transform: scale(1.3) rotate(10deg);
 }
 .icon > svg > a > g:hover > g#ben10icon {
   transform: scale(1.5);
@@ -192,6 +253,13 @@ g#emitter > g#hourglass-alt {
 .icon > svg > a > g:hover > g#ben10icon > g#emitter > g#hourglass-alt {
   opacity: 1;
 }
+g#ben10-backdrop {
+  transform-origin: 50% 50%;
+  transition: .25s;
+}
+.icon > svg > a > g:hover > g#background > g > g#ben10-backdrop {
+  transform: scale(1.5) rotate(-45deg);
+}
 .icon > svg > a > g:hover > g#policebox {
   transform: scale(2) skew(-2deg, -2deg) rotate(7deg);
 }
@@ -204,4 +272,25 @@ g#emitter > g#hourglass-alt {
 }
 .icon > svg > a > g:hover > g#background > g > #spiral {
   transform: scale(1.5) skew(-10deg, -10deg);
+}
+#tempus-body, #tempus-hat, #tempus-backdrop {
+  transition: .25s;
+}
+#tempus-body, #tempus-hat {
+  transform-origin: 50% 100%;
+}
+#tempus-backdrop {
+  transform-origin: 50% 50%;
+}
+.icon > svg > a > g:hover #tempus-body, .icon > svg > a > g:hover #tempus-hat, .icon > svg > a > g:hover #tempus-backdrop {
+  transform: scale(1.15);
+}
+#tempus-hat {
+  opacity: 0;
+}
+.icon > svg > a > g:hover #tempus-hat {
+  opacity: 1;
+}
+.icon > svg > a > g:hover #tempus-backdrop {
+  transform: rotate(45deg);
 }
