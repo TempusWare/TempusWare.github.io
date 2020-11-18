@@ -103,6 +103,7 @@ div.gallery > a {
   overflow: hidden;
   transition: .25s;
   text-decoration: none;
+  box-sizing: content-box;
 }
 div.gallery > a:hover {
   border: 5px solid black;
@@ -140,14 +141,6 @@ div.gallery > a:hover > div:nth-of-type(2) {
   text-decoration: underline;
   background-color: rgba(0, 0, 0, .3);
 }
-@media (max-width: 800px) {
-  div.info, div.gallery {
-    flex: 100%;
-  }
-  div.info > p {
-    max-width: 800px;
-  }
-}
 div#navbar {
   display: flex;
   flex-wrap: wrap;
@@ -159,29 +152,76 @@ div#navbar > div.icon {
 section#tempusware > div, section#socials > div {
   flex: 100%;
 }
-/* section.profile:nth-child(odd) {
-  flex-direction: row-reverse;
-} */
-/* section#tempusware {
-  flex-direction: row;
-} */
+section.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+section.showcase > img {
+  max-width: 1280px;
+  max-height: 720px;
+  margin: 0;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  box-sizing: content-box;
+}
+@media (max-width: 1280px) {
+  section.showcase > img {
+    border: 0;
+  }
+}
 
 section#tempusware {
   order: 1;
+  background-color: #224390;
+  background-image: linear-gradient(90deg, #224390 50%, #11275D 50%);
 }
-section#waddleonrewritten {
-  order: 3;
-  flex-direction: row-reverse;
-}
-section#ben10 {
-  order: 4;
+section#showcase-pertwee {
+  order: 2;
+  background-color: #902230;
+  background-image: linear-gradient(90deg, #902230 50%, #5D111B 50%);
 }
 section#doctorwho {
-  order: 2;
+  order: 3;
+  background-color: #5D2290;
+  background-image: linear-gradient(90deg, #5D2290 50%, #3A115D 50%);
+}
+section#showcase-surfer {
+  order: 4;
+  background-color: #262290;
+  background-image: linear-gradient(-90deg, #262290 50%, #14115D 50%);
+}
+section#waddleonrewritten {
+  order: 5;
+  flex-direction: row-reverse;
+  background-color: #227890;
+  background-image: linear-gradient(-90deg, #227890 50%, #114F5D 50%);
+}
+section#showcase-diamondhead {
+  order: 6;
+  background-color: #229071;
+  background-image: linear-gradient(-90deg, #229071 50%, #115D45 50%);
+}
+section#ben10 {
+  order: 7;
+  background-color: #429022;
+  background-image: linear-gradient(90deg, #429022 50%, #285D11 50%);
+}
+section#showcase-anniversary {
+  order: 8;
+  background-color: #903922;
+  background-image: linear-gradient(90deg, #903922 50%, #5D2011 50%);
 }
 section#socials {
-  order: 5;
+  order: 9;
+  background-color: #1D1D1D;
+  background-image: linear-gradient(90deg, #1D1D1D 50%, #131313  50%)
 }
+
 
 div.socials {
   display: flex;
@@ -310,4 +350,18 @@ g#ben10-backdrop {
 }
 .icon > svg > a > g:hover #tempus-backdrop {
   transform: rotate(45deg);
+}
+
+@media (max-width: 800px) {
+  div.info, div.gallery {
+    flex: 100%;
+  }
+  div.info > p {
+    max-width: 800px;
+  }
+  section.showcase > div {
+    width: 100%;
+    padding-top: 56.25%;
+    border: none;
+  }
 }
